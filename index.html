@@ -4,9 +4,6 @@
 <title>kiaevon.fotolog</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script> 
-<script type="text/javascript" src="jquery-2.1.0.js"></script> 
-<script type="text/javascript" >
 <link rel="stylesheet" href="./style.css">
 
 <!-- .w3-row-padding img {margin-bottom: 40px img {margin-bottom: -10px}
@@ -52,7 +49,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
 <div class="w3-row-padding" id="myGrid" style="margin-bottom:80px">
   <div class="w3-half">
      <div class="content_img" style="margin-bottom:80px">
-     <img src="images/R2411B_BERLIN_KODAK400TX_08_3600.jpg" style="width:100%" onclick="openOnImageClick()">
+     <img src="images/R2411B_BERLIN_KODAK400TX_08_3600.jpg" style="width:100%">
      <div>R2411B BERLIN<br>Camera: Olympus OM-10 <br>Lenz: Sun...<br>Film: KODAK 400TX <br>Developer: Rodinal, Solution 1:50, 13 min</div>
      </div>
      <div class="content_img" style="margin-bottom:80px">
@@ -122,16 +119,6 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
  
- function openOnImageClick()
-{
-//alert("Jai Sh Raam");
-// document.getElementById("images").src = "fruits.jpg";
- var img = document.createElement('img');
- img.setAttribute('src', 'tiger.jpg');
-  img.setAttribute('width', '200');
-   img.setAttribute('height', '150');
-  document.getElementById("images").appendChild(img);
-}
 </script>
 
 </body>
