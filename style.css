@@ -262,13 +262,12 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
  
 /* Child Text Container */ 
 .content_img div{ 
- position: absolute; 
+ /*position: absolute; 
  bottom: 0; 
- right: 0; 
+ right: 0; */ 
  background: black; 
  color: white; 
  margin-bottom: 5px; 
- font-family: sans-serif; 
  opacity: 0; 
  visibility: hidden; 
  -webkit-transition: visibility 0s, opacity 0.5s linear;  
