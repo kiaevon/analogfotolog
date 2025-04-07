@@ -260,9 +260,9 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
  margin-right: 10px; 
 } */
  
-/* Child Text Container */ 
+/* Child Text Container position: absolute; 
+ */ 
 .content_img div{ 
- position: absolute; 
  bottom: 0; 
  right: 0; 
  background: black; 
