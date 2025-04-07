@@ -260,8 +260,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
  margin-right: 10px; 
 } */
  
-/* Child Text Container position: absolute; 
- */ 
+/* Child Text Container position: absolute;  
 .content_img div{ 
  bottom: 0; 
  right: 0; 
@@ -278,14 +277,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 } 
  
-/* Hover on Parent Container */ 
+/* Hover on Parent Container 
 .content_img:hover{ 
- /* cursor: pointer;  */ 
+ /* cursor: pointer;   
 } 
  
 .content_img:hover div{ 
 /*  width: 150px; 
- padding: 8px 15px;  */ 
+ padding: 8px 15px; 
  visibility: visible; 
  opacity: 0.7;  
 } 
+ */ 
