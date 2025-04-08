@@ -271,7 +271,7 @@ position: absolute;  */
 } 
  
 /*Hover on Parent Container */
-.content_img:hover{ 
+.content_img img:hover{ 
   cursor: pointer;   
 } 
 
