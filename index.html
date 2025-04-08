@@ -187,7 +187,7 @@ let currentPage = 1;
   // Function to paginate the #myGrid container by hiding/showing specific items
     function changePage(pageNumber) {
       const grid = document.getElementById('myGrid');
-      const items = grid.getElementsByClassName('content_div');
+      const items = grid.getElementsByClassName('w3-half');
 
       // Calculate start and end index for the items to display
       const start = (pageNumber - 1) * itemsPerPage;
