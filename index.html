@@ -247,7 +247,7 @@ function onClick(element) {
    let currentPage = 1;
     const itemsPerPage = 2; // Number of items to show per page
 
-    // Function to paginate the #myGrid container by fading in and out specific items
+    // Function to paginate the #myGrid container by hiding/showing specific items
     function changePage(pageNumber) {
       const grid = document.getElementById('myGrid');
       const items = grid.getElementsByClassName('w3-half');
@@ -256,25 +256,22 @@ function onClick(element) {
       const start = (pageNumber - 1) * itemsPerPage;
       const end = pageNumber * itemsPerPage;
 
-      // Fade out all items first
+      // Show only the items for the selected page
       for (let i = 0; i < items.length; i++) {
-        items[i].classList.remove('visible'); // Fade out all items
+        if (i >= start && i < end) {
+          items[i].style.display = 'block';
+        } else {
+          items[i].style.display = 'none';
+        }
       }
 
-      // Wait for the fade-out to complete before showing the next page
-      setTimeout(() => {
-        // Show only the items for the selected page
-        for (let i = 0; i < items.length; i++) {
-          if (i >= start && i < end) {
-            items[i].classList.add('visible'); // Fade in items for the current page
-          }
-        }
-      }, 500); // Time delay to match the fade-out transition
+      // Update the current page number
+      currentPage = pageNumber;
     }
 
     // Show Page 1 by default when the page loads
     changePage(1);
-</script>
+  </script>
 
 </body>
 </html>
