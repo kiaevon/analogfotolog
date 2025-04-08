@@ -308,7 +308,7 @@ position: absolute;  */
   height: 150px;
 }
 
- Add Animation - Zoom in the Modal
+ /* Add Animation - Zoom in the Modal*/
 .modal-content, #caption { 
   animation-name: fade;
   animation-duration: 0.3s;
@@ -318,7 +318,6 @@ position: absolute;  */
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
-*/
 
 /* The Close Button 
 .close {
