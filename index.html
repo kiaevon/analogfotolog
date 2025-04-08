@@ -17,7 +17,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
 </head>
 
 
-<body style="max-width: 1500px">
+<body>
 <!-- Sidebar
 <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xlarge w3-padding w3-display-topright" style="padding:6px 24px">
@@ -32,7 +32,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
 </nav> -->
 
 <!-- !PAGE CONTENT! -->
-<div class="w3-content">
+<div class="w3-content" style="max-width: 1500px">
 <!---->
   
 <!-- Header 
@@ -42,10 +42,8 @@ body,h1 {font-family: "Helvetica", sans-serif}
 <header class="w3-center w3-margin-bottom w3-margin-top">
   <h1>analog fotolog</h1>
   <p>Slightly under construction</p>
-  <!--<p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>-->
 </header>
-</div>
-</div>
+
 
 <!-- Photo Grid style="margin-bottom:80px-->
 <div class="w3-row-padding" id="myGrid" ">
@@ -94,7 +92,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
   
 <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <!--<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>-->
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
