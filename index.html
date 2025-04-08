@@ -131,7 +131,6 @@ body,h1 {font-family: "Helvetica", sans-serif}
     <div>R2411B BERLIN 28<br>Camera: Olympus OM-10 <br>Lens: Sun-Zoom MACRO 70-210 1:3.8<br>Film: KODAK 400TX <br>Developer: Rodinal, Solution 1:50, 13 min</div>
      </div>
   </div>
-  
 </div>
 
 <!-- End Page Content -->
@@ -139,7 +138,6 @@ body,h1 {font-family: "Helvetica", sans-serif}
   
 <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <!--<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>-->
     <div class="w3-modal-content w3-animate-fading w3-center w3-transparent w3-padding">
       <img id="img01" class="w3-image">
       <p id="caption"></p>
@@ -174,8 +172,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
  
 <footer class="w3-container w3-light-grey w3-center w3-opacity" style="margin-top:30px"> 
   <p></p>
-  <p>&copy; 2025 analog fotolog.</p>
-  <p>All rights reserved.</p>
+  <p>&copy; 2025 analog fotolog. All rights reserved.</p>
   <p>Photos and content on this website may not be used, copied, or distributed without written permission.</p>
   <p>Contact: evon.kia@gmail.com</p>
 
@@ -191,11 +188,9 @@ body,h1 {font-family: "Helvetica", sans-serif}
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
   });-->
-
 </footer> 
  
 <script>
-
 // Open and close sidebar
 function w3_open() {
   document.getElementById("mySidebar").style.width = "100%";
@@ -205,6 +200,7 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
+  
  // Modal Image Gallery
 function onClick(element) {
   document.getElementById("img01").src = element.src;
@@ -234,7 +230,7 @@ function onClick(element) {
   // Paginate
     let currentPage = 1;
     const itemsPerPage = 2; // Number of items to show per page
-    const totalItems = document.querySelectorAll('.content_div').length;
+    const totalItems = document.querySelectorAll('w3-half').length;
     const totalPages = Math.ceil(totalItems / itemsPerPage); // Calculate total pages
 
     // Function to paginate the #myGrid container by fading in and out specific items
