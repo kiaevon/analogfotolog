@@ -267,6 +267,7 @@ position: absolute;  */
  font-style: italic; 
  color: #202020;
  margin-top: 5px; 
+ font-size: 15px; 
 } 
  
 /*Hover on Parent Container */
@@ -343,3 +344,8 @@ position: absolute;  */
   }
 }
 */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
