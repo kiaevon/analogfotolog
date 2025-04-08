@@ -264,6 +264,8 @@ function onClick(element) {
           items[i].style.display = 'none';
         }
       }
+      // Scroll to the top of the page
+      window.scrollTo({top: 0,behavior: 'smooth'});
 
       // Update the current page number
       currentPage = pageNumber;
