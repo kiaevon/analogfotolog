@@ -230,7 +230,7 @@ function onClick(element) {
   // Paginate
     let currentPage = 1;
     const itemsPerPage = 2; // Number of items to show per page
-    const totalItems = document.querySelectorAll('w3-half').length;
+    const totalItems = document.querySelectorAll('.w3-half').length;
     const totalPages = Math.ceil(totalItems / itemsPerPage); // Calculate total pages
 
     // Function to paginate the #myGrid container by fading in and out specific items
@@ -238,7 +238,7 @@ function onClick(element) {
       if (pageNumber < 1 || pageNumber > totalPages) return; // Prevent going out of bounds
 
       const grid = document.getElementById('myGrid');
-      const items = grid.getElementsByClassName('w3-half');
+      const items = grid.getElementsByClassName('.w3-half');
 
       // Calculate start and end index for the items to display
       const start = (pageNumber - 1) * itemsPerPage;
