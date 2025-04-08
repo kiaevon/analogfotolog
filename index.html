@@ -66,7 +66,6 @@ body,h1 {font-family: "Helvetica", sans-serif}
      <img src="images/R2411B_BERLIN_KODAK400TX_35_3600.jpg" style="width:100%" onclick="onClick(this)" alt="R2411B 35">
      <div>R2411B BERLIN 35<br>Camera: Olympus OM-10 <br>Lens: Sun-Zoom MACRO 70-210 1:3.8<br>Film: KODAK 400TX <br>Developer: Rodinal, Solution 1:50, 13 min</div>
      </div>
-     
   </div>
   
   <div class="w3-half">
@@ -167,11 +166,11 @@ body,h1 {font-family: "Helvetica", sans-serif}
    -->
 <div class="w3-center w3-padding-32">
   <div class="pagination w3-bar">
-    <button onclick="changePage(1)" class="w3-bar-item w3-button w3-hover-black">«</button>
+    <button onclick="changePage(currentPage - 1)" class="w3-bar-item w3-button w3-hover-black">«</button>
     <button onclick="changePage(1)" class="w3-bar-item w3-button w3-hover-black">1</button>
     <button onclick="changePage(2)" class="w3-bar-item w3-button w3-hover-black">2</button>
     <button onclick="changePage(3)" class="w3-bar-item w3-button w3-hover-black">3</button>
-    <button onclick="changePage(3)" class="w3-bar-item w3-button w3-hover-black">»</button>
+    <button onclick="changePage(currentPage + 1)" class="w3-bar-item w3-button w3-hover-black">»</button>
   </div>
 </div>
 
