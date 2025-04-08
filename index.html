@@ -142,6 +142,25 @@ function onClick(element) {
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
 }
+
+  // Disable right-click on the entire page
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  // Prevent image drag-and-drop
+  document.addEventListener("dragstart", function (e) {
+    if (e.target.nodeName === "IMG") {
+      e.preventDefault();
+    }
+  });
+
+  // Prevent image selection
+  document.addEventListener("mousedown", function (e) {
+    if (e.target.nodeName === "IMG") {
+      e.preventDefault();
+    }
+  });
 </script>
 
 </body>
