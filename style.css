@@ -280,29 +280,19 @@ position: absolute;  */
  margin-top: 5px; 
 } 
  
-/* Hover on Parent Container 
+Hover on Parent Container 
 .content_img:hover{ 
- /* cursor: pointer;   
+  cursor: pointer;   
 } 
- 
+/* 
 .content_img:hover div{ 
-/*  width: 150px; 
+  width: 150px; 
  padding: 8px 15px; 
  visibility: visible; 
  opacity: 0.7;  
 } 
  */ 
 
-/* Style the Image Used to Trigger the Modal */
-#myImg {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -322,7 +312,7 @@ position: absolute;  */
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px;
+ /* max-width: 700px;*/
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
@@ -331,24 +321,24 @@ position: absolute;  */
   display: block;
   width: 80%;
   max-width: 700px;
-  text-align: center;
+  text-align: right;
   color: #ccc;
   padding: 10px 0;
   height: 150px;
 }
 
-/* Add Animation - Zoom in the Modal */
+/* Add Animation - Zoom in the Modal
 .modal-content, #caption { 
   animation-name: zoom;
   animation-duration: 0.6s;
-}
+} 
 
 @keyframes zoom {
   from {transform:scale(0)} 
   to {transform:scale(1)}
-}
+}*/
 
-/* The Close Button */
+/* The Close Button 
 .close {
   position: absolute;
   top: 15px;
@@ -364,7 +354,7 @@ position: absolute;  */
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
-}
+}*/
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
