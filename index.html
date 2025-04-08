@@ -218,7 +218,38 @@ body,h1 {font-family: "Helvetica", sans-serif}
   // Disable right-click on the entire page
   document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
-  });-->
+  });
+  
+function changePage(pageNumber) {
+  if (pageNumber < 1 || pageNumber > totalPages) return; // Prevent going out of bounds
+  // Function to paginate the #myGrid container by fading in and out specific items
+  const grid = document.getElementById('myGrid');
+  const items = grid.getElementsByClassName('.w3-half');
+   // Calculate start and end index for the items to display
+  const start = (pageNumber - 1) * itemsPerPage;
+  const end = pageNumber * itemsPerPage;
+  // Fade out all items first
+  for (let i = 0; i < items.length; i++) {items[i].classList.remove('visible'); } // Fade out all items
+  // Wait for the fade-out to complete before showing the next page
+  // Show only the items for the selected page
+  setTimeout(() => {for (let i = 0; i < items.length; i++) {if (i >= start && i < end) {items[i].classList.add('visible');}}}, 500); 
+  // Fade in items for the current page
+  // Time delay to match the fade-out transition
+  // Update the current page number
+  currentPage = pageNumber;
+  // Scroll to the top of the page
+  window.scrollTo({top: 0,behavior: 'smooth'});
+  // Update the visibility of the Prev/Next buttons
+  updatePaginationControls();
+    // Function to update the visibility of the Prev/Next buttons
+  function updatePaginationControls() {
+  document.getElementById('prevBtn').disabled = currentPage === 1;
+  document.getElementById('nextBtn').disabled = currentPage === totalPages;}
+  }
+    // Show Page 1 by default when the page loads
+    changePage(1);
+  
+  -->
 </footer> 
  
 <script>
@@ -261,42 +292,36 @@ function onClick(element) {
   // Paginate
     let currentPage = 1;
     const itemsPerPage = 2; // Number of items to show per page
-    const totalItems = document.querySelectorAll('.w3-half').length;
-    const totalPages = Math.ceil(totalItems / itemsPerPage); // Calculate total pages
 
-  function changePage(pageNumber) {
-  if (pageNumber < 1 || pageNumber > totalPages) return; // Prevent going out of bounds
-  // Function to paginate the #myGrid container by fading in and out specific items
-  const grid = document.getElementById('myGrid');
-  const items = grid.getElementsByClassName('.w3-half');
-   // Calculate start and end index for the items to display
-  const start = (pageNumber - 1) * itemsPerPage;
-  const end = pageNumber * itemsPerPage;
-  // Fade out all items first
-  for (let i = 0; i < items.length; i++) {items[i].classList.remove('visible'); } // Fade out all items
-  // Wait for the fade-out to complete before showing the next page
-  // Show only the items for the selected page
-  setTimeout(() => {for (let i = 0; i < items.length; i++) {if (i >= start && i < end) {items[i].classList.add('visible');}}}, 500); 
-  // Fade in items for the current page
-  // Time delay to match the fade-out transition
-  // Update the current page number
-  currentPage = pageNumber;
-  // Scroll to the top of the page
-  window.scrollTo({top: 0,behavior: 'smooth'});
+    // Function to paginate the #myGrid container by fading in and out specific items
+    function changePage(pageNumber) {
+      const grid = document.getElementById('myGrid');
+      const items = grid.getElementsByClassName('w3-half');
 
+      // Calculate start and end index for the items to display
+      const start = (pageNumber - 1) * itemsPerPage;
+      const end = pageNumber * itemsPerPage;
 
-      // Update the visibility of the Prev/Next buttons
-      updatePaginationControls();
-    
+      // Fade out all items first
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove('visible'); // Fade out all items
+      }
 
-    // Function to update the visibility of the Prev/Next buttons
-    function updatePaginationControls() {
-      document.getElementById('prevBtn').disabled = currentPage === 1; // Disable "Previous" if on the first page
-      document.getElementById('nextBtn').disabled = currentPage === totalPages; // Disable "Next" if on the last page
+      // Wait for the fade-out to complete before showing the next page
+      setTimeout(() => {
+        // Show only the items for the selected page
+        for (let i = 0; i < items.length; i++) {
+          if (i >= start && i < end) {
+            items[i].classList.add('visible'); // Fade in items for the current page
+          }
+        }
+      }, 500); // Time delay to match the fade-out transition
     }
-}
+
     // Show Page 1 by default when the page loads
     changePage(1);
+
+  
      
 </script>
 
