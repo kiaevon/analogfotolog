@@ -91,7 +91,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
 </div>
   
 <!-- Modal for full size images on click-->
-  <div id="modal01" class="w3-modal w3-dark-gray" style="padding-top:0" onclick="this.style.display='none'">
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <!--<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>-->
     <div class="w3-modal-content w3-animate-fading w3-center w3-transparent w3-padding">
       <img id="img01" class="w3-image">
@@ -112,8 +112,8 @@ body,h1 {font-family: "Helvetica", sans-serif}
   </div>
 
 </div>
-<!-- Footer -->
- <!--
+<!-- Footer 
+ 
 <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-instagram w3-hover-opacity"></i>
@@ -122,7 +122,13 @@ body,h1 {font-family: "Helvetica", sans-serif}
   <i class="fa fa-twitter w3-hover-opacity"></i>
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>-->
+
+  // Disable right-click on the entire page
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+</footer> -->
  
 <script>
 
@@ -143,11 +149,9 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-  // Disable right-click on the entire page
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
 
+  
+ 
   // Prevent image drag-and-drop
   document.addEventListener("dragstart", function (e) {
     if (e.target.nodeName === "IMG") {
@@ -161,6 +165,7 @@ function onClick(element) {
       e.preventDefault();
     }
   });
+  
 </script>
 
 </body>
