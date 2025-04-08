@@ -241,7 +241,7 @@ function onClick(element) {
       if (pageNumber < 1 || pageNumber > totalPages) return; // Prevent going out of bounds
 
       const grid = document.getElementById('myGrid');
-      const items = grid.getElementsByClassName('content_div');
+      const items = grid.getElementsByClassName('w3-half');
 
       // Calculate start and end index for the items to display
       const start = (pageNumber - 1) * itemsPerPage;
