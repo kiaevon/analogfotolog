@@ -298,16 +298,16 @@ position: absolute;  */
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
-  margin: 0px;
-  display: block;
-  width: 80%;
- /* max-width: 700px;*/
   text-align: right;
   padding: 10px 0;
-  height: 150px;
+ /* margin: 0px;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  height: 150px;*/
 }
 
- /* Add Animation - Zoom in the Modal*/
+ /* Add Animation - Zoom in the Modal
 .modal-content, #caption { 
   animation-name: fade;
   animation-duration: 0.3s;
@@ -317,7 +317,7 @@ position: absolute;  */
   from {transform:scale(0)} 
   to {transform:scale(1)}
 }
-
+*/
 /* The Close Button 
 .close {
   position: absolute;
