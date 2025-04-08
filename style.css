@@ -269,7 +269,7 @@ position: absolute;  */
  margin-top: 5px; 
 } 
  
-Hover on Parent Container 
+/*Hover on Parent Container */
 .content_img:hover{ 
   cursor: pointer;   
 } 
@@ -293,7 +293,7 @@ Hover on Parent Container
   margin: auto;
   display: block;
   width: 90%;
-  max-width: 1200px;
+  /*max-width: 1200px;*/
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
