@@ -265,6 +265,13 @@ function onClick(element) {
       // Update the current page number
       currentPage = pageNumber;
 
+      // Scroll to the top of the page
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Smooth scrolling to the top
+      });
+
+
       // Update the visibility of the Prev/Next buttons
       updatePaginationControls();
     }
