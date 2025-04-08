@@ -49,7 +49,7 @@ body,h1 {font-family: "Helvetica", sans-serif}
 <div class="w3-row-padding" id="myGrid" style="margin-bottom:80px">
   <div class="w3-half">
      <div class="content_img" style="margin-bottom:80px">
-     <img src="images/R2411B_BERLIN_KODAK400TX_08_3600.jpg" style="width:100%">
+     <img src="images/R2411B_BERLIN_KODAK400TX_08_3600.jpg" style="width:100%" onclick="onClick(this)" alt="R2411B 08">
      <div>R2411B BERLIN 08<br>Camera: Olympus OM-10 <br>Lens: Sun-Zoom MACRO 70-210 1:3.8<br>Film: KODAK 400TX <br>Developer: Rodinal, Solution 1:50, 13 min</div>
      </div>
      <div class="content_img" style="margin-bottom:80px">
@@ -90,15 +90,14 @@ body,h1 {font-family: "Helvetica", sans-serif}
 <!-- End Page Content -->
 </div>
   
-<!-- Trigger the Modal -->
-<!-- The Modal 
-<div id="myModal" class="modal">-->
-
-  <!-- The Close Button 
-  <span class="close">&times;</span>-->
-
-  <!-- Modal Content (The Image) 
-  <img class="modal-content" id="img01">-->
+<!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
   
 <!-- Pagination -->
   <div class="w3-center w3-padding-32">
@@ -126,15 +125,6 @@ body,h1 {font-family: "Helvetica", sans-serif}
 </footer>-->
  
 <script>
-// Toggle grid padding
-function myFunction() {
-  var x = document.getElementById("myGrid");
-  if (x.className === "w3-row") {
-    x.className = "w3-row-padding";
-  } else { 
-    x.className = x.className.replace("w3-row-padding", "w3-row");
-  }
-}
 
 // Open and close sidebar
 function w3_open() {
@@ -145,25 +135,12 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
- // Get the modal
-var modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById("myImg");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-  modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+ // Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 </script>
 
